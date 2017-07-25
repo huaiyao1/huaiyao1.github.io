@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Origin</title>
+  <title>事件系统的封装 | Origin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Origin">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="事件系统的封装">
+<meta name="keywords" content="unity3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="事件系统的封装">
+<meta property="og:url" content="http://yoursite.com/2017/07/25/eventsystem/index.html">
 <meta property="og:site_name" content="Origin">
+<meta property="og:description" content="事件系统的封装">
+<meta property="og:updated_time" content="2017-07-25T14:53:19.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Origin">
+<meta name="twitter:title" content="事件系统的封装">
+<meta name="twitter:description" content="事件系统的封装">
   
     <link rel="alternative" href="/atom.xml" title="Origin" type="application/atom+xml">
   
@@ -151,36 +156,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-eventsystem" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/eventsystem/" class="archive-article-date">
-  	<time datetime="2017-07-25T14:50:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/eventsystem/">事件系统的封装</a>
+    <h1 class="article-title" itemprop="name">
+      事件系统的封装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/25/eventsystem/" class="archive-article-date">
+  	<time datetime="2017-07-25T14:50:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>事件系统的封装</strong></p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div></pre></td><td class="code"><pre><div class="line">/* </div><div class="line"> * 作 者: 槐尧 </div><div class="line"> * 创建时间: 2017/7/25 16:12:00 </div><div class="line"> * 说明:  事件管理</div><div class="line"> */</div><div class="line"></div><div class="line">using UnityEngine;</div><div class="line">using System;</div><div class="line">using System.Collections;</div><div class="line">using System.Collections.Generic;</div><div class="line"></div><div class="line">namespace HyFrameWork</div><div class="line">&#123;</div><div class="line">    public class HyEventManager</div><div class="line">    &#123;</div><div class="line">        private static HyEventManager m_instance;</div><div class="line">        public static HyEventManager Instance</div><div class="line">        &#123;</div><div class="line">            get </div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span> (m_instance == null)</div><div class="line">                &#123;</div><div class="line">                    m_instance = new HyEventManager();</div><div class="line">                &#125;</div><div class="line">                <span class="built_in">return</span> HyEventManager.m_instance; </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        private Dictionary&lt;string, Delegate&gt; m_eventDic = new Dictionary&lt;string, Delegate&gt;();</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 判断是否包含该类型的委托</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;&lt;/param&gt;</div><div class="line">        /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">        public bool ContainsEvent(string eventType)</div><div class="line">        &#123;</div><div class="line">            <span class="built_in">return</span> this.m_eventDic.ContainsKey(eventType);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 清除</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        public void <span class="function"><span class="title">CleanUp</span></span>()</div><div class="line">        &#123;</div><div class="line">            m_eventDic.Clear();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 检查是否该包含该委托，如果没有则加入委托列表</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;&lt;/param&gt;</div><div class="line">        private void CheckAddingNewListener(string eventType, Delegate listener)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (!this.m_eventDic.ContainsKey(eventType))</div><div class="line">                this.m_eventDic.Add(eventType, null);</div><div class="line"></div><div class="line">            Delegate tmpDelegate = this.m_eventDic[eventType];</div><div class="line">            <span class="keyword">if</span> (tmpDelegate != null &amp;&amp; tmpDelegate.GetType() != listener.GetType())</div><div class="line">            &#123;</div><div class="line">                throw new Exception(</div><div class="line">                    string.Format(<span class="string">"try to add incorrect eventtype &#123;0&#125;. needed listener type is &#123;1&#125;, given listener type is &#123;2&#125;."</span>,</div><div class="line">                    eventType,</div><div class="line">                    tmpDelegate.GetType(),</div><div class="line">                    listener.GetType()));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 如果委托列表含有该委托，清除</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;&lt;/param&gt;</div><div class="line">        /// &lt;returns&gt;&lt;/returns&gt;</div><div class="line">        private bool CheckRemovingListener(string eventType, Delegate listener)</div><div class="line">        &#123;</div><div class="line">            bool result = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">if</span> (!this.m_eventDic.ContainsKey(eventType))</div><div class="line">                result = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                Delegate tmpDelegate = this.m_eventDic[eventType];</div><div class="line">                <span class="keyword">if</span> (tmpDelegate != null &amp;&amp; tmpDelegate.GetType() != listener.GetType())</div><div class="line">                &#123;</div><div class="line">                    throw new Exception(</div><div class="line">                        string.Format(<span class="string">"try to remove incorrect eventtype &#123;0&#125;. needed listener type is &#123;1&#125;, given listener type is &#123;2&#125;."</span>,</div><div class="line">                        eventType,</div><div class="line">                        tmpDelegate.GetType(),</div><div class="line">                        listener.GetType()));</div><div class="line">                &#125;</div><div class="line">                result = <span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="built_in">return</span> result;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 添加事件监听</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;事件类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;回调函数&lt;/param&gt;</div><div class="line">        public void AddEventListener(string eventType, Action listener)</div><div class="line">        &#123;</div><div class="line">            CheckAddingNewListener(eventType, listener);</div><div class="line">            this.m_eventDic[eventType] = (Action)Delegate.Combine((Action)this.m_eventDic[eventType], listener);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 添加事件监听</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;事件类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;回调函数&lt;/param&gt;</div><div class="line">        public void AddEventListener&lt;T&gt;(string eventType, Action&lt;T&gt; listener)</div><div class="line">        &#123;</div><div class="line">            CheckAddingNewListener(eventType, listener);</div><div class="line">            this.m_eventDic[eventType] = (Action&lt;T&gt;)Delegate.Combine((Action&lt;T&gt;)this.m_eventDic[eventType], listener);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 添加事件监听,2个参数</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;事件类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;回调函数&lt;/param&gt;</div><div class="line">        public void AddEventListener&lt;T, U&gt;(string eventType, Action&lt;T, U&gt; listener)</div><div class="line">        &#123;</div><div class="line">            CheckAddingNewListener(eventType, listener);</div><div class="line">            this.m_eventDic[eventType] = (Action&lt;T, U&gt;)Delegate.Combine((Action&lt;T, U&gt;)this.m_eventDic[eventType], listener);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 移除事件监听</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;时间类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;回调函数&lt;/param&gt;</div><div class="line">        public void RemoveEventListener(string eventType, Action listener)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (CheckRemovingListener(eventType, listener))</div><div class="line">                this.m_eventDic[eventType] = (Action)Delegate.Remove((Action)this.m_eventDic[eventType], listener);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 移除事件监听，1个参数</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;时间类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;回调函数&lt;/param&gt;</div><div class="line">        public void RemoveEventListener&lt;T&gt;(string eventType, Action&lt;T&gt; listener)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (CheckRemovingListener(eventType, listener))</div><div class="line">            &#123;</div><div class="line">                Delegate tmpDelegate = (Action&lt;T&gt;)Delegate.Remove((Action&lt;T&gt;)this.m_eventDic[eventType], listener);</div><div class="line">                // remove the last delegate will <span class="built_in">return</span> null.</div><div class="line">                this.m_eventDic[eventType] = tmpDelegate;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 移除事件监听，2个参数</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;时间类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"listener"</span>&gt;回调函数&lt;/param&gt;</div><div class="line">        public void RemoveEventListener&lt;T, U&gt;(string eventType, Action&lt;T, U&gt; listener)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (CheckRemovingListener(eventType, listener))</div><div class="line">                this.m_eventDic[eventType] = (Action&lt;T, U&gt;)Delegate.Remove((Action&lt;T, U&gt;)this.m_eventDic[eventType], listener);</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 发送事件消息</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;事件类型&lt;/param&gt;</div><div class="line">        public void SendEvent(string eventType)</div><div class="line">        &#123;</div><div class="line">            Delegate targetDelegate = null;</div><div class="line">            <span class="keyword">if</span> (this.m_eventDic.TryGetValue(eventType, out targetDelegate))</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span> (targetDelegate == null)</div><div class="line">                    <span class="built_in">return</span>;</div><div class="line"></div><div class="line">                Delegate[] invocationList = targetDelegate.GetInvocationList();</div><div class="line">                <span class="keyword">for</span> (int i = 0; i &lt; invocationList.Length; i++)</div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span> (invocationList[i].GetType() != typeof(Action))</div><div class="line">                        throw new Exception(string.Format(<span class="string">"triggerEvnet &#123;0&#125; error : types of parameters are not match."</span>, eventType));</div><div class="line"></div><div class="line">                    Action action = (Action)invocationList[i];</div><div class="line">                    try</div><div class="line">                    &#123;</div><div class="line">                        action();</div><div class="line">                    &#125;</div><div class="line">                    catch (System.Exception ex)</div><div class="line">                    &#123;</div><div class="line">                        string exMsg = ex.ToString();</div><div class="line">                        Debug.LogError(exMsg);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 发送事件消息</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;typeparam name=<span class="string">"T"</span>&gt;参数类型&lt;/typeparam&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;事件类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"params01"</span>&gt;参数&lt;/param&gt;</div><div class="line">        public void SendEvent&lt;T&gt;(string eventType, T params01)</div><div class="line">        &#123;</div><div class="line">            Delegate targetDelegate = null;</div><div class="line">            <span class="keyword">if</span> (this.m_eventDic.TryGetValue(eventType, out targetDelegate))</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span> (targetDelegate == null)</div><div class="line">                    <span class="built_in">return</span>;</div><div class="line"></div><div class="line">                Delegate[] invocationList = targetDelegate.GetInvocationList();</div><div class="line">                <span class="keyword">for</span> (int i = 0; i &lt; invocationList.Length; i++)</div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span> (invocationList[i].GetType() != typeof(Action&lt;T&gt;))</div><div class="line">                        throw new Exception(string.Format(<span class="string">"triggerEvnet &#123;0&#125; error : types of parameters are not match. Needed type &#123;1&#125;, given p1 type &#123;2&#125;."</span>,</div><div class="line">                            eventType, invocationList[i].GetType(),</div><div class="line">                            params01.GetType()));</div><div class="line"></div><div class="line">                    Action&lt;T&gt; action = (Action&lt;T&gt;)invocationList[i];</div><div class="line">                    try</div><div class="line">                    &#123;</div><div class="line">                        action(params01);</div><div class="line">                    &#125;</div><div class="line">                    catch (System.Exception ex)</div><div class="line">                    &#123;</div><div class="line">                        string exMsg = ex.ToString();</div><div class="line">                        Debug.LogError(exMsg);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 发送事件消息</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        /// &lt;param name=<span class="string">"eventType"</span>&gt;事件类型&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"params01"</span>&gt;参数1&lt;/param&gt;</div><div class="line">        /// &lt;param name=<span class="string">"params02"</span>&gt;参数2&lt;/param&gt;</div><div class="line">        public void SendEvent&lt;T, U&gt;(string eventType, T params01, U params02)</div><div class="line">        &#123;</div><div class="line">            Delegate targetDelegate = null;</div><div class="line">            <span class="keyword">if</span> (this.m_eventDic.TryGetValue(eventType, out targetDelegate))</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span> (targetDelegate == null)</div><div class="line">                    <span class="built_in">return</span>;</div><div class="line"></div><div class="line">                Delegate[] invocationList = targetDelegate.GetInvocationList();</div><div class="line">                <span class="keyword">for</span> (int i = 0; i &lt; invocationList.Length; i++)</div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span> (invocationList[i].GetType() != typeof(Action&lt;T, U&gt;))</div><div class="line">                        throw new Exception(string.Format(</div><div class="line">                            <span class="string">"SendEvent &#123;0&#125; error : types of parameters are not match. Needed type&#123;1&#125;, given p1 p2 type [&#123;2&#125;], [type&#123;3&#125;]."</span>,</div><div class="line">                            eventType,</div><div class="line">                            invocationList[i].GetType(),</div><div class="line">                            params01.GetType(),</div><div class="line">                            params02.GetType()));</div><div class="line"></div><div class="line">                    Action&lt;T, U&gt; action = (Action&lt;T, U&gt;)invocationList[i];</div><div class="line">                    try</div><div class="line">                    &#123;</div><div class="line">                        action(params01, params02);</div><div class="line">                    &#125;</div><div class="line">                    catch (System.Exception ex)</div><div class="line">                    &#123;</div><div class="line">                        string exMsg = ex.ToString();</div><div class="line">                        Debug.LogError(exMsg);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>事件系统的使用</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">using UnityEngine;</div><div class="line">using System.Collections;</div><div class="line"></div><div class="line">namespace HyFrameWork</div><div class="line">&#123;</div><div class="line">    /// &lt;summary&gt;</div><div class="line">    /// Event example 事件系统使用</div><div class="line">    /// 1. 初始化注册消息(register event when init.)</div><div class="line">    /// 2. 退出注销消息(unregister event when quit)</div><div class="line">    /// 3. Behaviour类型，一般在OnEnable和OnDisable中完成事件处理</div><div class="line">    /// &lt;/summary&gt;</div><div class="line">    public class EventTest : MonoBehaviour, IHyEventListener</div><div class="line">    &#123;</div><div class="line">        const string EventTestUserInput = <span class="string">"EVENT_TEST_USEREVENT"</span>;</div><div class="line">        void <span class="function"><span class="title">OnEnable</span></span>()</div><div class="line">        &#123;</div><div class="line">            RegisterEvent();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        void <span class="function"><span class="title">OnDisable</span></span>()</div><div class="line">        &#123;</div><div class="line">            UnRegisterEvent();</div><div class="line">        &#125;</div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 注册事件</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        public void <span class="function"><span class="title">RegisterEvent</span></span>()</div><div class="line">        &#123;</div><div class="line">            HyEventManager.Instance.AddEventListener&lt;string&gt;(EventTestUserInput, this.OnUserInput);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        /// &lt;summary&gt;</div><div class="line">        /// 注销事件</div><div class="line">        /// &lt;/summary&gt;</div><div class="line">        public void <span class="function"><span class="title">UnRegisterEvent</span></span>()</div><div class="line">        &#123;</div><div class="line">            HyEventManager.Instance.RemoveEventListener&lt;string&gt;(EventTestUserInput, this.OnUserInput);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        private void OnUserInput(string msg)</div><div class="line">        &#123;</div><div class="line">            Debug.Log(<span class="string">"[on User input message:"</span> + msg + <span class="string">"]"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        void <span class="function"><span class="title">Update</span></span>()</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (Input.GetKeyDown(KeyCode.Space))</div><div class="line">            &#123;</div><div class="line">                // trigger the event.</div><div class="line">                HyEventManager.Instance.SendEvent&lt;string&gt;(EventTestUserInput, <span class="string">"Hello World!"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -192,57 +220,104 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/25/eventsystem/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/21/hexocommend/" class="archive-article-date">
-  	<time datetime="2017-07-21T14:15:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/21/hexocommend/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo常用命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/21/hexocommend/">hexo常用命令</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -265,8 +340,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
