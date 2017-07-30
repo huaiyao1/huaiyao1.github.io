@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: hexo | Origin</title>
+  <title>python编码问题 | Origin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Origin">
-<meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
+  <meta name="description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python编码问题">
+<meta property="og:url" content="http://yoursite.com/2017/07/30/pythonhello/index.html">
 <meta property="og:site_name" content="Origin">
+<meta property="og:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
+<meta property="og:image" content="http://yoursite.com/img/python1/python2.png">
+<meta property="og:updated_time" content="2017-07-30T14:58:17.049Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Origin">
+<meta name="twitter:title" content="python编码问题">
+<meta name="twitter:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
+<meta name="twitter:image" content="http://yoursite.com/img/python1/python2.png">
   
     <link rel="alternative" href="/atom.xml" title="Origin" type="application/atom+xml">
   
@@ -151,60 +158,171 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-pythonhello" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/21/hexocommend/" class="archive-article-date">
-  	<time datetime="2017-07-21T14:15:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/21/hexocommend/">hexo常用命令</a>
+    <h1 class="article-title" itemprop="name">
+      python编码问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/30/pythonhello/" class="archive-article-date">
+  	<time datetime="2017-07-30T14:47:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码</p>
+<pre><code>print &apos;世界，你好！&apos;
+</code></pre><p>运行时，发现会报以下错误<br><img src="/img/python1/python2.png" alt="path"><br>这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。<br>解决方法为只要在文件开头加入 # -<em>- coding: UTF-8 -</em>- 或者 #coding=utf-8 就行了。</p>
+<pre><code># -*- coding: UTF-8 -*-
+print &apos;世界，你好！&apos;
+</code></pre><p>此时，会发现已经正常打印出我们想要看到的</p>
+<pre><code>世界，你好！
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/30/pythonhello/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/07/27/pythonstart/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python开发环境的搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -227,9 +345,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
