@@ -16,7 +16,8 @@
 <meta property="og:site_name" content="Origin">
 <meta property="og:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
 <meta property="og:image" content="http://yoursite.com/img/python1/python2.png">
-<meta property="og:updated_time" content="2017-07-30T15:00:45.000Z">
+<meta property="og:image" content="http://yoursite.com/img/python1/python1.png">
+<meta property="og:updated_time" content="2017-07-30T15:10:35.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python编码问题">
 <meta name="twitter:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
@@ -180,12 +181,18 @@
       
         <p>在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码</p>
 <pre><code>print &apos;世界，你好！&apos;
-</code></pre><p>运行时，发现会报以下错误<br><img src="/img/python1/python2.png" alt="path"><br>这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。<br>解决方法为只要在文件开头加入 # -<em>- coding: UTF-8 -</em>- 或者 #coding=utf-8 就行了。</p>
+</code></pre><p>运行时，发现会报以下错误<br><img src="/img/python1/python2.png" alt="path"><br>这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。<br><strong><em>解决方法为只要在文件开头加入 # -</em>- coding: UTF-8 -<em>- 或者 #coding=utf-8 就行了。</em></strong></p>
 <pre><code># -*- coding: UTF-8 -*-
 print &apos;世界，你好！&apos;
 </code></pre><p>此时，会发现已经正常打印出我们想要看到的</p>
 <pre><code>世界，你好！
-</code></pre>
+</code></pre><a id="more"></a>
+<p><em>注意：如果你使用编辑器，同时需要设置 py 文件存储的格式为 UTF-8，否则会出现类似以下错误信息：</em></p>
+<blockquote>
+<p>SyntaxError: (unicode error) ‘utf-8’ codec can’t decode byte 0xc4 in<br>    position 0: invalid continuation byte</p>
+</blockquote>
+<p>Pycharm 设置步骤：<br>进入 file &gt; Settings，在输入框搜索 encoding。<br>找到 Editor &gt; File encodings，将 IDE Encoding 和 Project Encoding 设置为utf-8。<br>如图所示<br><img src="/img/python1/python1.png" alt="path"></p>
+
       
 
       
