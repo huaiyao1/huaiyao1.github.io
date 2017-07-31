@@ -8,20 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>python编码问题 | Origin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
+  <meta name="description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码123456789    print &apos;世界，你好！&apos;``` 运行时，发现会报以下错误![path](/img/python1/python2.png)这是因为Python中默认的编码格式是 ASCII 格式，在没修">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python编码问题">
 <meta property="og:url" content="http://yoursite.com/2017/07/30/pythonhello/index.html">
 <meta property="og:site_name" content="Origin">
-<meta property="og:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
-<meta property="og:image" content="http://yoursite.com/img/python1/python2.png">
+<meta property="og:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码123456789    print &apos;世界，你好！&apos;``` 运行时，发现会报以下错误![path](/img/python1/python2.png)这是因为Python中默认的编码格式是 ASCII 格式，在没修">
 <meta property="og:image" content="http://yoursite.com/img/python1/python1.png">
-<meta property="og:updated_time" content="2017-07-30T15:10:35.304Z">
+<meta property="og:updated_time" content="2017-07-31T14:19:44.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python编码问题">
-<meta name="twitter:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码 print &amp;apos;世界，你好！&amp;apos; 运行时，发现会报以下错误这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。解决方法为只要在文件开">
-<meta name="twitter:image" content="http://yoursite.com/img/python1/python2.png">
+<meta name="twitter:description" content="在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码123456789    print &apos;世界，你好！&apos;``` 运行时，发现会报以下错误![path](/img/python1/python2.png)这是因为Python中默认的编码格式是 ASCII 格式，在没修">
+<meta name="twitter:image" content="http://yoursite.com/img/python1/python1.png">
   
     <link rel="alternative" href="/atom.xml" title="Origin" type="application/atom+xml">
   
@@ -179,14 +178,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码</p>
-<pre><code>print &apos;世界，你好！&apos;
-</code></pre><p>运行时，发现会报以下错误<br><img src="/img/python1/python2.png" alt="path"><br>这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。<br><strong><em>解决方法为只要在文件开头加入 # -</em>- coding: UTF-8 -<em>- 或者 #coding=utf-8 就行了。</em></strong></p>
-<pre><code># -*- coding: UTF-8 -*-
-print &apos;世界，你好！&apos;
-</code></pre><p>此时，会发现已经正常打印出我们想要看到的</p>
-<pre><code>世界，你好！
-</code></pre><a id="more"></a>
+        <p>在上次文章中，通过安装python环境以及pycharm编辑器，了解了简单的python程序，并手动编写了一个简单的hello world程序。但是当我们换成我们的汉语打印时，如下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">    <span class="built_in">print</span> <span class="string">'世界，你好！'</span></div><div class="line">``` </div><div class="line">运行时，发现会报以下错误</div><div class="line">![path](/img/python1/python2.png)</div><div class="line">这是因为Python中默认的编码格式是 ASCII 格式，在没修改编码格式时无法正确打印汉字，所以在读取中文时会报错。</div><div class="line">***解决方法为只要在文件开头加入 <span class="comment"># -*- coding: UTF-8 -*- 或者 #coding=utf-8 就行了。***</span></div><div class="line">``` bash</div><div class="line">    <span class="comment"># -*- coding: UTF-8 -*-</span></div><div class="line">    <span class="built_in">print</span> <span class="string">'世界，你好！'</span></div></pre></td></tr></table></figure></p>
+<p>此时，会发现已经正常打印出我们想要看到的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">世界，你好！</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p><em>注意：如果你使用编辑器，同时需要设置 py 文件存储的格式为 UTF-8，否则会出现类似以下错误信息：</em></p>
 <blockquote>
 <p>SyntaxError: (unicode error) ‘utf-8’ codec can’t decode byte 0xc4 in<br>    position 0: invalid continuation byte</p>
